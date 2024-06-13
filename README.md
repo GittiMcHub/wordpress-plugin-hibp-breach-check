@@ -6,7 +6,7 @@
   toggle-breach="hibp-toggle-breach" 
   toggle-safe="hibp-toggle-safe" 
   input-placeholder="+49..."] 
-  <b>Check if you affected by this breach:</b> 
+  <b>Check if you are affected by this breach:</b> 
 [/hibp_checker]
 ```
 - Content inside the Shortcode will be placed above the Form.
