@@ -20,7 +20,7 @@ function user_form($breach, $input_placeholder, $content)
 	}
 	$out .= '<form id="hibp-form-' . $breach . '" action="' . esc_url($_SERVER['REQUEST_URI']) . '" method="post">';
 	$out .= '<input class="hibp-input" placeholder="'. $input_placeholder .'" name="hibp_input" />';
-	$out .= '<input type="submit" class="hibp-button" name="submit" value="Jetzt Prüfen" />';
+	$out .= '<input type="submit" class="hibp-button" name="submit" value="Check" />';
 	$out .= '</form></div>';
 	return $out;
 }
@@ -82,7 +82,7 @@ function hibp_checker_shortcode($atts = [], $content = null, $tag = '')
 	);
 	// During a submit
 	if (isset($_POST['submit']) && isset($_POST['hibp_input'])) {
-		$user_input = sanitize_text_field($_POST['hibp_input']);
+		$user_input = preg_replace('/\s+/', '', sanitize_text_field($_POST['hibp_input']));
 		try {
 			// get reponse
 			$apiresponse = hibp_api_call($hibp_atts['apikey'], $user_input);

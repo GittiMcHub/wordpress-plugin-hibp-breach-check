@@ -2,17 +2,30 @@
     padding: 8px;
 }
 
+.hibp-container form {
+	display: flex;
+	align-items: center;
+}
+
 .hibp-input {
-    border: solid #fab900 2px;
+    border: solid black 2px;
     padding: 8px;
     margin: 8px;
 }
 
 .hibp-button {
     cursor: pointer;
-    border: solid #fab900 1px;
+    border: solid black 1px;
     border-radius: 4px;
-    background-color: #fab900;
+    background-color: black;
     color: #fff;
     padding: 8px;
+}
+
+#hibp-toggle-breach {
+	display: none;
+}
+
+#hibp-toggle-safe {
+	display: none;
 }

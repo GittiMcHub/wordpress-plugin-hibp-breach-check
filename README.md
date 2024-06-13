@@ -6,7 +6,7 @@
   toggle-breach="hibp-toggle-breach" 
   toggle-safe="hibp-toggle-safe" 
   input-placeholder="+49..."] 
-  <b>Jetzt Handynummer eingeben und kostenlos prüfen, ob Du betroffen bist:</b> 
+  <b>Check if you affected by this breach:</b> 
 [/hibp_checker]
 ```
 - Content inside the Shortcode will be placed above the Form.
@@ -22,7 +22,7 @@ The Generated code is the following
     </div>
     <form id="hibp-form-$breach" action="current/url" method="post">
         <input class="hibp-input" placeholder="$input-placeholder" name="hibp_input">
-        <input type="submit" class="hibp-button" name="submit" value="Jetzt Prüfen">
+        <input type="submit" class="hibp-button" name="submit" value="Check">
     </form>
 </div>
 ```
