@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: HIBP Breach Checker
- * Plugin URI: http://example.com
+ * Plugin URI: https://github.com/GittiMcHub/wordpress-plugin-hibp-breach-check
  * Description: Provides Input Field for https://haveibeenpwned.com/ API v3/breachedaccount. If found, it will toogle an Elements visibility: [hibp_checker apikey="" breach="Facebook" toggle-safe="hibp-toggle-safe" toggle-breach="hibp-toggle-breach" input-placeholder="+49..." ]
  * Version: 1.0
  * Author: GittiMcHub
