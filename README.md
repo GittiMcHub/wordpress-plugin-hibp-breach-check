@@ -5,13 +5,17 @@
   apikey="abcdefghijklmnop" 
   toggle-breach="hibp-toggle-breach" 
   toggle-safe="hibp-toggle-safe" 
-  input-placeholder="+49..."] 
+  input-placeholder="+49..."
+  prefill-id="wpforms-1234-field_56"
+  ] 
+  
   <b>Check if you are affected by this breach:</b> 
 [/hibp_checker]
 ```
 - Content inside the Shortcode will be placed above the Form.
 - If Data is found in given Breach, the HTML Element with ID "hibp-toggle-breach" will be visible or hidden (toggles).
 - If Data is NOT found in given Breach, the HTML Element with ID "hibp-toggle-safe" will be visible or hidden (toggles).
+- If prefill-id is set, a document.getElementById("$prefill-id").value="$userinput" will prefill an input
 
 # Styling
 The Generated code is the following

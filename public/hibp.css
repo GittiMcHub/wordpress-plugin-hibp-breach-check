@@ -3,8 +3,10 @@
 }
 
 .hibp-container form {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .hibp-input {

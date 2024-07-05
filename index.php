@@ -25,7 +25,7 @@ function user_form($breach, $input_placeholder, $content)
 	return $out;
 }
 
-function user_feedback($toggle_element_id)
+function user_feedback($toggle_element_id, $input_id = null, $input_value = null)
 {
 	$out = "";
 	if ( $toggle_element_id !== null) {	
@@ -40,6 +40,9 @@ function user_feedback($toggle_element_id)
 					}
 				};";
 		$out .= "toggleVisibility('" . $toggle_element_id . "');";
+		if($input_id !== null && $input_value !== null){
+			$out .= 'document.getElementById("'. $input_id .'").value="'. $input_value .'";';
+		}
 		$out .= "});";
 		$out .= "</script>";
 	}
@@ -76,6 +79,7 @@ function hibp_checker_shortcode($atts = [], $content = null, $tag = '')
 			'toggle-breach' => 'hibp-toggle-breach',
 			'toggle-safe' => 'hibp-toggle-safe',
 			'input-placeholder' => '+49...',
+			'prefill-id' => null
 		),
 		$atts,
 		$tag
@@ -90,7 +94,7 @@ function hibp_checker_shortcode($atts = [], $content = null, $tag = '')
 			if (!empty($apiresponse)) {
 				foreach ($apiresponse as $breach) {
 					if ($breach->Name === $hibp_atts['breach']) {
-						return user_feedback($hibp_atts['toggle-breach']);
+						return user_feedback($hibp_atts['toggle-breach'], $hibp_atts['prefill-id'], $user_input);
 					}
 				}
 			}
